@@ -1,6 +1,6 @@
-# 🧾 Backend Auth Api
+# Backend Auth Api
 
-## 📌 Project Title
+## Project Title
 Flask Authentication & User-Owned Expense Tracker API
 
 ---
