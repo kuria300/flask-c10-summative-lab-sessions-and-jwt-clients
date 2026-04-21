@@ -5,7 +5,7 @@ Flask Authentication & User-Owned Expense Tracker API
 
 ---
 
-## 📖 Project Description
+## Project Description
 
 This project is a RESTful API built with Flask that provides:
 
@@ -33,8 +33,9 @@ Using Pipenv:
 
 pipenv install
 pipenv shell
+python main.py / app.py
 
-## 🔒 Security Features
+## Security Features
 
 - JWT stored in HttpOnly cookies  
 - User-specific data isolation  
@@ -43,7 +44,7 @@ pipenv shell
 
 ---
 
-## 📦 Dependencies (Pipfile)
+## Dependencies (Pipfile)
 
 Main dependencies include:
 
