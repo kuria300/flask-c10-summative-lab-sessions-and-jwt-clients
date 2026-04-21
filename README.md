@@ -32,7 +32,9 @@ cd backend-auth
 Using Pipenv:
 
 pipenv install
+
 pipenv shell
+
 python main.py / app.py
 
 ## Security Features
