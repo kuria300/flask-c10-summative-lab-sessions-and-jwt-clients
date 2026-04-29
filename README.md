@@ -27,19 +27,23 @@ This is a professional Flask REST API that provides secure authentication using 
 8. [Database & Seeding](#database--seeding)
 9. [Dependencies](#dependencies)
 10. [Environment Variables](#environment-variables)
-11. [License](#license)
+11. [Author](#Author)
+12. [Contributing](#Contributing)
+13. [License](#license)
 
 ## Installation
 
 ### Prerequisites
 
-- Python 3.12 or higher
-- Pipenv package manager
+- Python 3.10 or higher
+- Pipenv (package manager)
 
 ### Step-by-Step Setup
 
-1. **Clone or navigate to the project directory**:
+1. **Clone and navigate to the project directory**:
    ```bash
+   git clone (https://github.com/username/repo.git)
+
    cd backend-auth
    ```
 
@@ -83,8 +87,8 @@ The application uses a configuration file (`config.py`) that sets up:
   - Access token path: `/api/`
   - Refresh token path: `/token/refresh`
   - CSRF protection enabled for secure operations
-- **CORS**: Enabled for `http://localhost:4000` (frontend client if using one)
-- **Password Hashing**: Bcrypt for secure password storage
+- **Secret Key** set up shown (see [Environment Variables](#environment-variables) section) then populated from env file.
+
 
 ## Running the Server
 
@@ -104,7 +108,7 @@ Modify the port in `app.py`:
 
 ```python
 if __name__== "__main__":
-    app.run(port=5001 or 5000)  
+    app.run(port=5000)  
 ```
 
 Then run:
@@ -256,8 +260,8 @@ All endpoints prefixed with `/api/` are protected and require a valid JWT access
 1. **Open Postman** and create a new collection
 2. **Configure Cookie Handling**:
    - Go to Settings → General
-   - Enable "Automatically follow redirects"
-   - Ensure cookie jar is enabled
+   - Enable "Automatically follow redirects" (on by Default)
+   - Ensure cookie jar is enabled (on by Default)
 
 3. **Create Environment Variables** (optional):
    - Create an environment called "Flask API"
@@ -574,19 +578,8 @@ pipenv install package-name
 Create a `.env` file in the project root directory with the following variables (optional some in Config.py):
 
 ```env
-DEBUG=True
-
 # JWT Secret Key (generate a strong random key)
 SECRET_KEY=your-super-secret-key-change-this-in-production
-
-# Database
-DATABASE_URL=sqlite:///db.db
-
-# CORS Origins
-CORS_ORIGINS=http://localhost:4000,http://localhost:4000
-
-# API Port
-FLASK_PORT=5001
 ```
 
 ### Generating a Secure Secret Key
@@ -597,6 +590,17 @@ python -c "import secrets; print(secrets.token_hex(32))"
 
 Copy the output and use it as your `SECRET_KEY` in the `.env` file then exported to Config.py.
 
+## Author
+
+Eugene Kuria Maina
+
+## Contributing
+
+Contributions are always welcome!
+
+Please adhere to this project's `code of conduct`.
+
+
 ## License
 
-This project is provided as-is for educational purposes. Modify and use as needed for your projects.
+This project is provided as-is for educational purposes. Modify and use as needed for your projects 
